@@ -1,6 +1,7 @@
-
+%clear all to reset all the variables
 clear all;
 
+%calling the necessary .m files
 load_params_inertial_case();
 controldesign();
 PIDparam();
