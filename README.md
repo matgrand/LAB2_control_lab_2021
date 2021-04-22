@@ -20,9 +20,9 @@ To import this project:
 
 -Instead of "save" use COMMIT (on "enter a comment" just give a very small desription of what you did(good practice))
 
--To import changes made by others on your local version use PULL
+-To import changes made by others on your local version use PUSH
 
--To upload your changes use PUSH (after COMMIT)
+-To upload your changes use PULL (after COMMIT)
 
 # Good practices
 -Add a "clear all" to the beginning of every .m file; to avoid confusing the variables, every .m file should re-create all the needed variables at every run. The execution may be slower but we avoid misunderstandings. 
