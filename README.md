@@ -24,7 +24,7 @@ To import this project:
 
 -To upload your changes use PUSH (after COMMIT)
 
-# Rules
+# Good practices
 -Add a "clear all" to the beginning of every .m file; to avoid confusing the variables, every .m file should re-create all the needed variables at every run. The execution may be slower but we avoid misunderstandigs. 
 
 -All the simulink models should go in the models folder.
