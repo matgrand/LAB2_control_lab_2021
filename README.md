@@ -36,6 +36,7 @@ To modify files, add files etc..
 
 # Notes
 -To open the project, after you imported it, open matlab and double ckick on the .prj file
+
 -Remember to add the simulink_models folder to the path (right click > add to path).
 
 
