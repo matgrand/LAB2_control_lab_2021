@@ -9,7 +9,7 @@ A repo for a simple collaboration on lab2 of the control lab course 2021 in UNIP
 
 -Keep code readable and simple.
 
-# Instructions
+# Instructions: importing the project
 To import this project:
 
 -Open Matlab, click on "new" > Project > From Git
@@ -21,7 +21,7 @@ To import this project:
 -click retrieve and wait. You should now have all the files.
 
 
-To modify files, add files etc..
+# Instructions: modifying files, importing changes...
 
 -On the "Project" section you shuld spot the "Source control" section.
 
