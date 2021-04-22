@@ -11,9 +11,13 @@ A repo for a simple collaboration on lab2 of the control lab course 2021 in UNIP
 
 # Instructions
 To import this project:
+
 -Open Matlab, click on "new" > Project > From Git
+
 -On repository path copy and paste https://github.com/matgrand/LAB2_control_lab_2021
+
 -On sandbox choose where you want the project to be located on your pc.
+
 -click retrieve and wait. You should be done importing.
 
 
