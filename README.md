@@ -18,7 +18,7 @@ To import this project:
 
 -On the "Project" section you shuld spot the "Source control" section.
 
--Instead of "save" use COMMIT (on "enter a comment" just give a very small desription of what you did(good practice))
+-Instead of "save" use COMMIT (on "enter a comment" just give a very small description of what you did(good practice))
 
 -To import changes made by others on your local version use PUSH
 
