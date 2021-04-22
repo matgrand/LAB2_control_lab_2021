@@ -2,13 +2,6 @@
 
 A repo for a simple collaboration on lab2 of the control lab course 2021 in UNIPD
 
-# Rules
--Add a "clear all" to the beginning of every .m file; to avoid confusing the variables, every .m file should re-create all the needed variables at every run. The execution may be slower but we avoid misunderstandigs. 
-
--All the simulink models should go in the models folder.
-
--Keep code readable and simple.
-
 # Instructions: importing the project
 To import this project:
 
@@ -32,6 +25,14 @@ To import this project:
 -To import changes made by others on your local version use PULL (do it often)
 
 -To upload your changes use PUSH (after COMMIT)
+
+# Rules
+-Add a "clear all" to the beginning of every .m file; to avoid confusing the variables, every .m file should re-create all the needed variables at every run. The execution may be slower but we avoid misunderstandigs. 
+
+-All the simulink models should go in the models folder.
+
+-Keep code readable and simple.
+
 
 
 # Notes
