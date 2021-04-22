@@ -18,11 +18,23 @@ To import this project:
 
 -On sandbox choose where you want the project to be located on your pc.
 
--click retrieve and wait. You should be done importing.
+-click retrieve and wait. You should now have all the files.
 
+To modify files, add files etc..
+
+-On the "Project" section you shuld spot the "Source control" section.
+
+-Instead of "save" use COMMIT (on "enter a comment" just give a very small desription of what you did(good practice))
+
+-To refresh all the labels use REFRESH
+
+-To import changes made by others on your local version use PULL (do it often)
+
+-To upload your changes use PUSH (after COMMIT)
 
 
 # Notes
+-To open the project, after you imported it, open matlab and double ckick on the .prj file
 -Remember to add the simulink_models folder to the path (right click > add to path).
 
 
