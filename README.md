@@ -16,7 +16,9 @@ To import this project:
 
 # Instructions: modifying files, importing changes...
 
--On the "Project" section you shuld spot the "Source control" section.
+-On the "Project" section you shuld spot the "Source control" section, if you don't see the project section double click on the .prj file.
+
+-To add a file to the project copy it into the project folder and right click on it > add to git.
 
 -Instead of "save" use COMMIT (on "enter a comment" just give a very small description of what you did(good practice))
 
