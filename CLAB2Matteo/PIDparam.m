@@ -1,4 +1,3 @@
-% PID parameters
 Kp = delta_K*cos(delta_phi)
 Ki = Kp/Ti
 Kd = Kp*Td

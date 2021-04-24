@@ -1,11 +1,3 @@
-%clear all to reset all the variables
-clear all;
-
-%calling the necessary .m files
-load_params_inertial_case();
-controldesign();
-PIDparam();
-
 % Test different sampling times
 Ts = 0.001; 
 % Ts = 0.01; 
@@ -13,15 +5,15 @@ Ts = 0.001;
 z = tf('z', Ts);
 
 % 1st test 
-% % B-Euler
-% s = (1-z^-1)/Ts;
+% B-Euler
+s = (1-z^-1)/Ts;
 
 % 2nd test
 % % F-Euler
 % s = (z-1)/Ts;
  
-% sysC_d = Kp+Ki/s+Kd*s/(Tl*s+1);
-% sysC_d = minreal(sysC_d)
+sysC_d = Kp+Ki/s+Kd*s/(Tl*s+1);
+sysC_d = minreal(sysC_d)
 
 % % Check BE
 % sysC_PID = Kp + Ki*Ts*z/(z-1) + Kd*(z-1)/((Tl+Ts)*z-Tl);
@@ -32,8 +24,8 @@ z = tf('z', Ts);
 % sysC_d = c2d(sysC_rd, Ts, 'tustin')
 
 % 4th test (optional)
-% Exact Zero-order Hold in emulating C(s)
-sysC_d = c2d(sysC_rd, Ts, 'zoh')
+% % Exact Zero-order Hold in emulating C(s)
+% sysC_d = c2d(sysC_rd, Ts, 'zoh')
 
 
 % tf of the controller: numerator and denominator
