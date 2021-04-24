@@ -16,7 +16,7 @@ To import this project:
 
 # Instructions: modifying files, importing changes...
 
--On the "Project" section you shuld spot the "Source control" section, if you don't see the project section double click on the .prj file.
+On the "Project" section you shuld spot the "Source control" section, if you don't see the project section double click on the .prj file.
 
 -To add a file to the project copy it into the project folder and right click on it > source control > add to git (the commit and push/pull).
 
