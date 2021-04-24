@@ -28,6 +28,8 @@ To import this project:
 
 # Good practices, do what the hell you want
 
+-write reasonable comments on the commits
+
 -All the simulink models should go in the models folder.
 
 -Keep code readable and simple.
