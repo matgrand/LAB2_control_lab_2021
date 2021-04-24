@@ -1,3 +1,8 @@
+
+load_params_inertial_case();
+controldesign();
+PIDparam();
+
 % Test different sampling times
 Ts = 0.001; 
 % Ts = 0.01; 

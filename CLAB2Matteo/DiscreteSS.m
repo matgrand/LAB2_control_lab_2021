@@ -1,3 +1,10 @@
+%initialize variables
+load_params_inertial_case();
+controldesign();
+
+%state space regulator in continous time
+regulatorCT();
+
 Ts = 0.001; 
 % Ts = 0.01; 
 % Ts = 0.05;

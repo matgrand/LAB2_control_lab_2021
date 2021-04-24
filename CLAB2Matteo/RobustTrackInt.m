@@ -1,3 +1,6 @@
+%assignment 2.1.2 5
+DiscreteSS();
+
 % Robust tracking with integral action
 % Extended sate-space model
 Ae = [0 C; zeros(2,1) A];
