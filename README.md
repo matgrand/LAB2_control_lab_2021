@@ -22,9 +22,9 @@ To import this project:
 
 -Instead of "save" use COMMIT (on "enter a comment" just give a very small description of what you did(good practice))
 
--To import changes made by others on your local version use PUSH
+-To import changes made by others on your local version use PULL
 
--To upload your changes use PULL (after COMMIT)
+-To upload your changes use PUSH (after COMMIT)
 
 # Good practices, do what the hell you want
 
