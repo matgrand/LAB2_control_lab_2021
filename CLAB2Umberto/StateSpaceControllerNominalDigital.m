@@ -17,7 +17,7 @@ D = 0;
 
 bb = zeros(size(A,1),1);
 bb = [bb;1];
-xx = bb\[A,B;C,0];
+xx = [A,B;C,0]\bb;
 Nx = xx(1:end-1);
 Nx = reshape(Nx,[],1);
 Nu = xx(end);
@@ -55,4 +55,4 @@ D0 = T*[zeros(pOutput,mInput),eye(pOutput);...
         zeros(size(A,1) - pOutput,mInput),L];
 A = Atmp;
 B = Btmp;
-[Phi0,Gamma0,H0,J0] = discretizedStateSpace(A0,B0,C0,D0,'FE',Ts);
+[Phi0,Gamma0,H0,J0] = discretizedStateSpace(A0,B0,C0,D0,'zoh',Ts);

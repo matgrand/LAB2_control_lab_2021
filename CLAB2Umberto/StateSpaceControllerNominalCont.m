@@ -13,7 +13,7 @@ D = 0;
 
 bb = zeros(size(A,1),1);
 bb = [bb;1];
-xx = bb\[A,B;C,0];
+xx = [A,B;C,0]\bb;
 Nx = xx(1:end-1);
 Nx = reshape(Nx,[],1);
 Nu = xx(end);
@@ -26,6 +26,8 @@ dampingFactor = log(1/Mp)/sqrt(pi^2+log(1/Mp)^2);
 wn = 3/ts5/dampingFactor;
 z = -dampingFactor*wn*3 + 1i*3*wn*sqrt(1-dampingFactor^2);
 p = [z,conj(z)];
+
+
 K = place(A,B,p);
 pOutput = size(C,1);
 mInput = size(B,2);
