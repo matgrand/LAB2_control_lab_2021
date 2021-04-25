@@ -1,3 +1,4 @@
+
 %assignment 2.1.2 (3) (4)
 
 %FORWARD EULER DISCRETIZATION REDUCED ORDER OBSERVER
@@ -6,16 +7,18 @@
 
 clear all;
 %initialize variables
-load_params_inertial_case();
-controldesign();
+initialize_vars();
 
 %sample time
 Ts = 0.001;
 
-setup_state_space();
+%create the continous state space for the motor
+continous_state_space();
 
-% Discrete estimator
-% FE
+%reduced order cont time estimator
+reduced_order_estimator_cont_ss();
+
+% FORWARD Discrete estimator
 Fo = 1 + Ao*Ts;
 Go = Bo*Ts;
 Ho = Co;

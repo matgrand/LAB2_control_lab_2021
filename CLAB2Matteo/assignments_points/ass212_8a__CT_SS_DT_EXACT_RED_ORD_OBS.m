@@ -1,3 +1,4 @@
+
 %assignment 2.1.2 (8) ((3)(4))
 
 %EXACT DISCRETIZATION REDUCED ORDER OBSERVER
@@ -9,7 +10,9 @@ clear all;
 %sample time
 Ts = 0.001;
 
-setup_state_space();
+continous_state_space();
+
+reduced_order_estimator_cont_ss();
 
 % Discrete estimator
 % exact discretization 
