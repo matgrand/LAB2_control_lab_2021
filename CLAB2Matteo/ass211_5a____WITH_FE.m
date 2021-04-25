@@ -38,7 +38,7 @@ sysC_d = minreal(sysC_d)
 
 %run simulink
 open_system('discretePIDTustinExact');
-
+sim('discretePIDTustinExact');
 
 
 

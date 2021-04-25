@@ -2,6 +2,6 @@
 
 ass220_1_2_3_DT_SS_NOMINAL();
 
-close_system('SSDiscreteDirect');
+%close_system('SSDiscreteDirect');
 
 open_system('LAB2_3');

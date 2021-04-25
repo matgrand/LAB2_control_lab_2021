@@ -3,6 +3,6 @@
 
 ass211_5c____EXACT_DISCRETIZATION();
 
-close_system('discretePIDTustinExact');
+%close_system('discretePIDTustinExact');
 
 open_system('LAB2_1');

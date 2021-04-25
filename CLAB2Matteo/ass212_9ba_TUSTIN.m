@@ -20,3 +20,7 @@ Ho = sqrt(Ts)*Co*(1-Ao*Ts/2)^-1;
 Jo = Do+Co*(1-Ao*Ts/2)^-1*Bo*Ts*0.5;
 
 open_system('regulatorDTcase');
+sim('regulatorDTcase');
+
+
+

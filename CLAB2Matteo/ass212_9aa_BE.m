@@ -20,3 +20,4 @@ Ho = Co*Fo;
 Jo = Do+Co*Fo*Bo*Ts;
 
 open_system('regulatorDTcase');
+sim('regulatorDTcase');

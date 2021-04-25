@@ -21,19 +21,6 @@ sys_obs_DT = c2d(sys_obs_CT, Ts, 'zoh');
 [Fo, Go, Ho, Jo] = ssdata(sys_obs_DT);
 
 
-open_system('regulatorDTcase'); %note: regulatorDTexact is useless 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+open_system('regulatorDTcase'); 
+sim('regulatorDTcase'); 
 

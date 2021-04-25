@@ -31,3 +31,4 @@ sysC_d = c2d(sysC_rd, Ts, 'zoh')
 
 %run simulink
 open_system('discretePIDTustinExact');
+sim('discretePIDTustinExact');

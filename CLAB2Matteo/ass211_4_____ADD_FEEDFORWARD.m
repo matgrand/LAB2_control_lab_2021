@@ -31,3 +31,4 @@ sysC_d = minreal(sysC_d)
 
 %run simulink
 open_system('discretePIDmodelFF');
+sim('discretePIDmodelFF');

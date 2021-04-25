@@ -2,6 +2,6 @@
 
 ass220_4_5___DT_SS_INT_ACT();
 
-close_system('SSDiscreteRegulatorIntAct');
+%close_system('SSDiscreteRegulatorIntAct');
 
 open_system('LAB2_3');

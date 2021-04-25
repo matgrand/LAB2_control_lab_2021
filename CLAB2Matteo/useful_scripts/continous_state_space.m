@@ -4,6 +4,17 @@
 
 initialize_vars();
 
+
+%if t_sett and Mpk doesn't exist use defaults
+if exist('t_sett', 'var') == 1
+else
+    t_sett = 0.15;   %0.1
+end
+if exist('Mpk', 'var') == 1
+else
+    Mpk = 0.10;  %0.08
+end
+
 %regulatorCT();
 A = [0 1; 0 -1/Tm];
 B = [0; km/(gbox.N*Tm)];
@@ -11,9 +22,6 @@ C = [1 0];
 D = 0;
 wc = 2*pi*50;
 delta = 1/sqrt(2);
-
-t_sett = 0.15;   %0.1
-Mpk = 0.1;  %0.08
 
 dump = (log(1/Mpk))/sqrt(pi^2+(log(1/Mpk))^2);
 wn = 3/(dump*t_sett);

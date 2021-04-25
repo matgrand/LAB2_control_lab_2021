@@ -20,3 +20,4 @@ continous_state_space();
 reduced_order_estimator_cont_ss();
 
 open_system('regulatorCTcase');
+sim('regulatorCTcase');

@@ -20,3 +20,4 @@ reduced_order_estimator_cont_ss();
 integral_action_cont_ss();
 
 open_system('IntActionObserver');
+sim('IntActionObserver');

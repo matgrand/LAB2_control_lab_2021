@@ -39,3 +39,4 @@ Ke_d = [Ked(2) Ked(3)];
 
 %(3)
 open_system('SSDiscreteRegulatorIntAct');
+sim('SSDiscreteRegulatorIntAct');

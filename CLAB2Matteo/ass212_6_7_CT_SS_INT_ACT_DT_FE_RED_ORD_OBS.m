@@ -24,3 +24,4 @@ Jo = Do;
 
 %(7)
 open_system('IntActDiscreteRegulator');
+sim('IntActDiscreteRegulator');

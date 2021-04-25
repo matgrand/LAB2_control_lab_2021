@@ -6,7 +6,7 @@
 
 ass211_1_2_3_DT_BE_PID_ANTIWINDUP();
 
-close_system('discretePIDmodel');
+%close_system('discretePIDmodel');
 
 
 open_system('LAB2_1');

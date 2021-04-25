@@ -9,6 +9,9 @@ clear all;
 %sample time
 Ts = 0.01;
 
+t_sett = 0.18;
+Mpk = 0.15;
+
 continous_state_space();
 
 reduced_order_estimator_cont_ss();
@@ -22,3 +25,4 @@ Ho = Co*Fo;
 Jo = Do+Co*Fo*Bo*Ts;
 
 open_system('IntActDiscreteRegulator');
+sim('IntActDiscreteRegulator');

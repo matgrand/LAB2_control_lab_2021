@@ -13,6 +13,9 @@ initialize_vars();
 %sample time
 Ts = 0.01;
 
+t_sett = 0.3;
+Mpk = 0.35;
+
 %create the continous state space for the motor
 continous_state_space();
 
@@ -26,6 +29,8 @@ Ho = Co;
 Jo = Do;
 
 open_system('regulatorDTcase');
+
+sim('regulatorDTcase');
 
 
 

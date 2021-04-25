@@ -10,6 +10,9 @@ clear all;
 %sample time
 Ts = 0.01;
 
+t_sett = 0.12;
+Mpk = 0.1;
+
 continous_state_space();
 
 reduced_order_estimator_cont_ss();
@@ -23,3 +26,4 @@ sys_obs_DT = c2d(sys_obs_CT, Ts, 'zoh');
 
 
 open_system('IntActDiscreteRegulator');
+sim('IntActDiscreteRegulator');

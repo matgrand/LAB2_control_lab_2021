@@ -25,22 +25,7 @@ reduced_order_estimator_disc_ss();
 
 %(3)
 open_system('SSDiscreteDirect');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+sim('SSDiscreteDirect');
 
 
 
