@@ -14,7 +14,10 @@ controldesign();
 %(1)
 %PID CONTROLLER 
 % Useful results
-ts_5 = 0.08;
+% ts_5 = 0.08;
+% Mp = 0.1;
+
+ts_5 = 0.15;
 Mp = 0.1;
 
 CT_PID();

@@ -11,7 +11,7 @@ clear all;
 initialize_vars();
 
 %sample time
-Ts = 0.001;
+Ts = 0.01;
 
 %create the continous state space for the motor
 continous_state_space();
@@ -19,7 +19,7 @@ continous_state_space();
 %reduced order cont time estimator
 reduced_order_estimator_cont_ss();
 
-% FORWARD Discrete estimator
+% FORWARD euler Discrete estimator
 Fo = 1 + Ao*Ts;
 Go = Bo*Ts;
 Ho = Co;
