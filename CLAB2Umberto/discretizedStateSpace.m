@@ -19,7 +19,9 @@ function [Phi,Gamma,H,J] = discretizedStateSpace(A,B,C,D,method,Ts)
         H = sqrt(Ts)*C*tmp;
         J = D+C*tmp*B*Ts/2;
     elseif strcmp(method,'zoh')
-        disp('not implemented!!');
+        sysc = ss(A,B,C,D);
+        sysD = c2d(sysc,Ts,'zoh');
+        [Phi,Gamma, H, J] = ssdata(sysD);
     else
         disp('ERROR : Insert a proper method');
     end
