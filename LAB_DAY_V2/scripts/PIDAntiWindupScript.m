@@ -32,10 +32,7 @@ for k = 1:4
             save_system('ExperimentModelPIDAntiwindupDigital')
             disp('ExperimentModelPIDAntiwindupDigital')
             pause(pause_time);
-%             while strcmp('stopped',get_param('ExperimentModelPIDAntiwindupDigital','SimulationStatus'))
-%                 disp('waiting')
-%                 pause(2);
-%             end
+            
             close_system('ExperimentModelPIDAntiwindupDigital');
             out.ScopeThl = ScopeThl;
             out.ScopeDataIa = ScopeDataIa;

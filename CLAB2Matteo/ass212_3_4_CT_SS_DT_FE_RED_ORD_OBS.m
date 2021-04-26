@@ -11,7 +11,7 @@ clear all;
 initialize_vars();
 
 %sample time
-Ts = 0.01;
+Ts = 0.05;
 
 t_sett = 0.3;
 Mpk = 0.35;
