@@ -40,13 +40,13 @@ for k = 1:4                                             % try all method (BE, FE
         open_system('ExperimentModelPIDDigital');
         set_param('ExperimentModelPIDDigital','SimulationMode','external')
         
-        set_param('ExperimentModelPIDAntiwindupDigital','StopTime',stop_time)
+        set_param('ExperimentModelPIDDigital','StopTime',stop_time)
         
         set_param('ExperimentModelPIDDigital','SimulationCommand','connect')
         set_param('ExperimentModelPIDDigital','SimulationCommand','start');
         
-        save_system('ExperimentModelPIDAntiwindupDigital')
-        disp('ExperimentModelPIDAntiwindupDigital')
+        save_system('ExperimentModelPIDDigital')
+        disp('ExperimentModelPIDDigital')
         pause(pause_time);
             
         
