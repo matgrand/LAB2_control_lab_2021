@@ -42,28 +42,28 @@ w0 = wn(3)*sqrt(1-2*zeta(3)^2);
 % q22 = (1/thetaD)^2;
 % q33 = 6;
 % q44 = 1;
-
-thetaH = 0.2685*5/180*pi;%OTTIMO 0.187
-thetaD = 0.585*pi/36;
-u = sqrt(10);
-qI = 0.1;
-q11 = (1/thetaH)^2;
-q22 = (1/thetaD)^2;
-q33 = 6.6;
-q44 = 0;
-
-% thetaH = 0.2*5/180*pi;
 % 
-% thetaD = 0.4*pi/36;
-% 
-% u = sqrt(2);
-r = 1/u^2;
-% 
+% thetaH = 0.26*5/180*pi;%OTTIMO 0.187
+% thetaD = 0.585*pi/36;
+% u = sqrt(10);
 % qI = 0.1;
 % q11 = (1/thetaH)^2;
 % q22 = (1/thetaD)^2;
-% q33 = 1;
+% q33 = 6.55;
 % q44 = 0;
+% 
+thetaH = 0.26*5/180*pi;
+
+thetaD = 0.585*pi/36;
+
+u = sqrt(10);
+r = 1/u^2;
+
+qI = 0.1;
+q11 = (1/thetaH)^2;
+q22 = (1/thetaD)^2;
+q33 = 6.55;
+q44 = 0;
 
 Aq1 = [0,1;...
        -w0^2,0];
