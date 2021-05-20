@@ -116,7 +116,7 @@ drv.V2duty = drv.dutymax/drv.Vbus;          % voltage to duty cycle code (0-255)
 
 % dimension
 wheel.h = 26e-3;                            % wheel height
-wheel.r = 68-3/2;                           % wheel radius
+wheel.r = 68e-3/2;                           % wheel radius
 
 % center of mass (CoM) position
 wheel.xb = 0;                               % (left) wheel CoM x-pos in body frame
