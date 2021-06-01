@@ -20,51 +20,50 @@ stop_time = '5';
 pause_time = 10;
 
 
-
-for k = 1:4                                             % try all method (BE, FE, tustin and zoh)
-    for j = 1:3                                         % try all sample time
-        Ts = tmpTs(j);
-        if k == 1
-            method = 'BE';
-            [CInt,CDer] = discretizedPID(method,Ts,Tl);
-        elseif k == 2
-            method = 'FE';
-            [CInt,CDer] = discretizedPID(method,Ts,Tl);
-        elseif k == 3
-            method = 'tustin';
-            [CInt,CDer] = discretizedPID(method,Ts,Tl);
-        elseif k == 4
-            method = 'zoh';
-            [CInt,CDer] = discretizedPID(method,Ts,Tl);
-        end
-        open_system('ExperimentModelPIDDigital');
-        set_param('ExperimentModelPIDDigital','SimulationMode','external')
-        
-        set_param('ExperimentModelPIDDigital','StopTime',stop_time)
-        
-        set_param('ExperimentModelPIDDigital','SimulationCommand','connect')
-        set_param('ExperimentModelPIDDigital','SimulationCommand','start');
-        
-        save_system('ExperimentModelPIDDigital')
-        disp('ExperimentModelPIDDigital')
-        pause(pause_time);
-            
-        
-        close_system('ExperimentModelPIDDigital');
-        out.ScopeThl = ScopeThl;
-        out.ScopeDataIa = ScopeDataIa;
-        out.ts5 = ts5;
-        out.Mp = Mp;
-        out.Ki = Ki;
-        out.Kp = Kp;
-        out.Kd = Kd;
-        out.Tl = Tl;
-        out.Ts = Ts;
-        out.alpha = alpha;
-        saver(strcat('ExperimentModelPIDDigital',method),out);
-        clear out;
-    end
-end
+% for k = 1:4                                             % try all method (BE, FE, tustin and zoh)
+%     for j = 1:3                                         % try all sample time
+%         Ts = tmpTs(j);
+%         if k == 1
+%             method = 'BE';
+%             [CInt,CDer] = discretizedPID(method,Ts,Tl);
+%         elseif k == 2
+%             method = 'FE';
+%             [CInt,CDer] = discretizedPID(method,Ts,Tl);
+%         elseif k == 3
+%             method = 'tustin';
+%             [CInt,CDer] = discretizedPID(method,Ts,Tl);
+%         elseif k == 4
+%             method = 'zoh';
+%             [CInt,CDer] = discretizedPID(method,Ts,Tl);
+%         end
+%         open_system('ExperimentModelPIDDigital');
+%         set_param('ExperimentModelPIDDigital','SimulationMode','external')
+%         
+%         set_param('ExperimentModelPIDDigital','StopTime',stop_time)
+%         
+%         set_param('ExperimentModelPIDDigital','SimulationCommand','connect')
+%         set_param('ExperimentModelPIDDigital','SimulationCommand','start');
+%         
+%         save_system('ExperimentModelPIDDigital')
+%         disp('ExperimentModelPIDDigital')
+%         pause(pause_time);
+%             
+%         
+%         close_system('ExperimentModelPIDDigital');
+%         out.ScopeThl = ScopeThl;
+%         out.ScopeDataIa = ScopeDataIa;
+%         out.ts5 = ts5;
+%         out.Mp = Mp;
+%         out.Ki = Ki;
+%         out.Kp = Kp;
+%         out.Kd = Kd;
+%         out.Tl = Tl;
+%         out.Ts = Ts;
+%         out.alpha = alpha;
+%         saver(strcat('ExperimentModelPIDDigital',method),out);
+%         clear out;
+%     end
+% end
 
 Tw = ts5 / 5;
 Kw = 1/Tw;
@@ -73,11 +72,12 @@ stop_time = '5';
 pause_time = 10;
 
 %AntiWindup
-for k = 1:4
-    for j = 1:3
-        for l = 1:2
+for k = 1:4  %discretizzazione
+    for j = 1:3 %tempi di campionamento
+        for l = 1:2 %yes / no anti-windup
             if l == 1
                 antiWindup = 'YesAntiWindup';
+                Kw = 1/Tw;
             else
                 antiWindup = 'NoAntiWindup';
                 Kw = 0;
@@ -103,11 +103,9 @@ for k = 1:4
             set_param('ExperimentModelPIDAntiwindupDigital','SimulationCommand','connect')
             set_param('ExperimentModelPIDAntiwindupDigital','SimulationCommand','start');
             
-            
             save_system('ExperimentModelPIDAntiwindupDigital')
             disp('ExperimentModelPIDAntiwindupDigital')
             pause(pause_time);
-            
             
             close_system('ExperimentModelPIDAntiwindupDigital');
             out.ScopeThl = ScopeThl;
@@ -126,6 +124,8 @@ for k = 1:4
         end
     end
 end
+
+return
 
 loadParEst;
 
